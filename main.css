@@ -1,0 +1,982 @@
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Cond Light'), local('OpenSans-CondensedLight'), url(OpenSansCondensed300.ttf) format('truetype');
+}
+
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+ 
+.clearfix {
+    display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+    display: block;
+}
+ 
+* html .clearfix {
+    height: 1%;
+}
+
+/*  ======================================================================
+    MAIN
+*/
+
+i, cite, em, var, address, dfn {
+    font-style: italic;    
+}
+
+#bs-wrapper {
+    width: 980px;
+    margin: 0 auto;
+}
+
+#bs-head {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+#bs-search {
+    position: absolute;
+    right: 0;
+    top: 5px;
+}
+
+#searchform {
+    position: relative;
+}
+
+#searchInput {
+    border: 1px solid #ccc;
+    -webkit-appearance: none; 
+    padding: 5px;
+    background-image: url(images/lupe.png);
+    background-position: center left;
+    background-repeat: no-repeat;
+
+    padding-left: 25px;
+}
+
+#searchGoButton {
+    border: 1px solid #ccc;
+    padding: 4px 7px;
+}
+
+#bs-logo {
+}
+
+#bs-cactions {
+    margin: 2px;
+    padding: 0;
+    list-style: none;
+    position: absolute;
+    right: 8px;
+    top: 5px;
+
+    font-size: 10px;
+}
+
+#bs-cactions li {
+
+    display: inline-block;
+    margin-left: 5px;
+
+}
+
+#bs-cactions a, #bs-cactions a:link, #bs-cactions a:visited {
+    -webkit-text-shadow: 1px 1px 1px rgba(255,255,255, .7);
+    -moz-text-shadow: 1px 1px 1px rgba(255,255,255, .7);
+    -o-text-shadow: 1px 1px 1px rgba(255,255,255, .7);
+    text-shadow: 1px 1px 2px #fff;
+
+    color: #444;
+}
+
+
+body {
+ /*   background: #fcfcfc; */
+    background-image: url(images/noise_bg.png);
+    color: #323232;
+    font-family: Lucida Grande, Verdana, Arial, sans-serif;
+    font-size: 12px;
+    line-height: 18px;
+    width: 980px;
+    margin: 0 auto;
+    padding: 0;    
+}
+
+#bs-content {
+    background: #f4f4f4;
+    margin: 10px 0;
+    border-radius: 7px;
+    border: 1px solid #dbdbdb;
+    min-height: 500px;
+    width: 100%;
+
+    position: relative;
+}
+
+#bs-content-wrapper {
+    margin: 0 10px 20px 10px;
+}
+
+.printfooter {
+    display: none;    
+}
+
+/*  ======================================================================
+    NAVIGATION
+*/
+
+.sub-sub-menu {
+    border-bottom: 1px solid #585858;    
+    background: #303030 url('images/menu_arrow_right.png') no-repeat center right !important; 
+}
+.sub-sub-menu span {
+    padding: 7px 15px !important;
+}
+
+#bs-navigation{
+    width: 100%;
+    clear: both;
+    background: #3e3e3e;
+    height: 40px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+#bs-navigation a, #bs-navigation span{
+    display: block;
+    color: #cacaca;
+}
+
+#bs-navigation ul, #bs-navigation ul li, #bs-navigation ul ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#bs-navigation ul {
+    z-index: 597;
+    float: left;
+    height: 40px;
+}
+
+#bs-navigation ul li {
+    float: left;
+    vertical-align: middle;
+    list-style-image: none !important;
+}
+#bs-navigation ul li a, #bs-navigation ul li span{
+    padding: 10px 14px;
+}
+
+#bs-navigation ul li.hover,
+#bs-navigation ul li:hover {
+    position: relative;
+    z-index: 599;
+    cursor: default;
+}
+
+#bs-navigation ul ul {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 598;
+    width: 160px;
+}
+
+#bs-navigation ul ul li {
+    float: none;
+    width: 100%;
+}
+
+#bs-navigation ul ul li a{
+    padding: 7px 15px;
+}
+
+#bs-navigation ul ul ul {
+    top: 0px;
+    left: 99%;
+}
+
+#bs-navigation ul li:hover > ul {
+    visibility: visible;
+}
+
+#bs-navigation ul li.rtl ul {
+    top: 100%;
+    right: 0;
+    left: auto;
+}
+
+#bs-navigation ul li.rtl ul ul {
+    top: 0;
+    right: 99%;
+    left: auto;
+}
+
+#bs-navigation ul a:link,
+#bs-navigation ul a:visited { 
+    color: #cacaca;
+    text-decoration: none; 
+}
+#bs-navigation ul a:hover,
+#bs-navigation ul a.active,
+#bs-navigation ul li.active-trail a { color: #fff; }
+
+#bs-navigation li.expandable ul a, 
+#bs-navigation li.leaf ul a { 
+    color: #474747;
+}
+#bs-navigation ul li.expandable { 
+    background:transparent url('images/menu_arrow.png') no-repeat center right; 
+}
+#bs-navigation li.expandable ul a:hover,
+#bs-navigation li.expandable span:hover,
+#bs-navigation li.expandable ul a.active,
+#bs-navigation li.expandable span.active,
+#bs-navigation li.leaf ul a:hover,
+#bs-navigation li.leaf ul a.active { 
+    color: #fff;
+}
+
+#bs-navigation ul ul li:hover,
+#bs-navigation ul ul li.active-trail,
+#bs-navigation ul ul li.last a {
+ 
+}
+
+#bs-navigation ul ul ul li.last a {
+  border-bottom: none !important;
+}
+
+#bs-navigation ul ul li.first a {
+  border-top: none;  
+}
+
+
+#bs-navigation ul li:hover,
+#bs-navigation ul li.active-trail {
+
+}
+
+#bs-navigation ul ul li {
+    background: #303030;
+    padding-top: 1px;
+}
+
+#bs-navigation ul ul li.expandable {
+    background: #303030 url('images/menu_arrow.png') no-repeat center right;
+}
+
+#bs-navigation ul ul a:link,
+#bs-navigation ul ul a:visited { 
+    color: #cacaca;
+}
+
+#bs-navigation ul ul a {
+    border-bottom: 1px solid #585858;
+}
+
+#bs-navigation ul ul ul a {
+    border-bottom: 1px solid #585858;
+}
+
+.bs-maincontent {
+    width: 75%;
+}
+
+.bs-sidebar {
+    width: 23%;    
+}
+
+.bs-row1 {
+    float: left;    
+}
+
+.bs-row2 {
+    float: right;    
+}
+
+.bs-widget {
+    margin-bottom: 20px;    
+}
+
+.bs-widget h3 {
+
+    background-image: url(images/bckspc_headline.png);
+    background-repeat: no-repeat;
+    background-position: center left;
+    color: #000;
+    font-size: 13px;
+    line-height: 16px;
+    padding:5px 10px;
+    padding-left: 22px;
+    text-align:left;
+}
+
+.bs-widget-content {
+   padding: 5px;
+   background-color: #fff;
+}
+
+iframe {
+    border: none;
+}
+
+#bs-openclose iframe {
+    margin: 0 auto;
+}
+
+#bs-openclose .bs-widget-content {
+    text-align: center;
+}
+
+.bs-news-date {
+    font-size: 9px;
+    color: #666;
+    float: right;
+    font-weight: normal;
+}
+
+.wl-entry p {
+    text-align: justify;
+}
+
+.wl-entry {
+    padding: 8px;
+}
+
+.tw-content {
+    display: block;
+}
+
+.bs-widget-content a[title="Blog"] {
+    margin-left: 10px;
+    margin-top: 11px;
+    margin-bottom: 7px;
+    display: inline-block;
+}
+
+.tw-date {
+    font-size: 9px;    
+}
+
+#tw-list {
+    margin:0;
+    padding: 0;
+}
+
+#tw-list li{
+    list-style:none;
+    margin-bottom: 2px;
+    padding: 4px;
+}
+ 
+#tw-list li.odd{
+}
+ 
+#tw-list li.even{
+    background-color:#f8f8f8;
+}
+
+.vimeo-content {
+    margin-top: 9px;
+    padding: 10px 0;
+}
+
+.vimeo-content div{
+    float:left;
+    padding: 0px 18px 0 18px;
+}
+
+.vimeo-images {
+    background-position: center;
+    background-color: #000;
+    text-align: center;
+    display: block;
+}
+
+.vimeo-images span {
+    display: inline-block;
+    background-image: url(images/play_button.png);
+    width: 66px;
+    height: 40px;
+    margin-top: 35px;
+}
+
+table {
+	font-size: 100%;
+}
+a {
+	text-decoration: none;
+	color: #002bb8;
+	background: none;
+}
+a:visited {
+	color: #5a3696;
+}
+a:active {
+	color: #faa700;
+}
+a:hover {
+	text-decoration: underline;
+}
+a.stub {
+	color: #772233;
+}
+a.new, #p-personal a.new {
+	color: #cc2200;
+}
+a.new:visited, #p-personal a.new:visited {
+	color: #a55858;
+}
+
+img {
+	border: none;
+	vertical-align: middle;
+}
+p {
+	margin: .4em 0 .5em 0;
+	line-height: 1.5em;
+}
+p img {
+	margin: 0;
+}
+
+hr {
+	height: 1px;
+	color: #aaa;
+	background-color: #aaa;
+	border: 0;
+	margin: .2em 0 .2em 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: black;
+	background: none;
+	font-weight: normal;
+	margin: 0;
+	overflow: hidden;
+	padding-top: .5em;
+	padding-bottom: .17em;
+	border-bottom: 1px solid #aaa;
+}
+
+h2, h3, h4, h5, h6 {
+    margin-bottom: 12px;   
+}
+
+.editsection {
+    font-weight: normal;    
+}
+
+h1#firstHeading { font-size: 188%; }
+h1 { font-size: 178%; }
+h1 .editsection { font-size: 53%; }
+h2 { font-family: sans-serif; font-size: 1.5em; }
+h2 .editsection { font-size: 67%; }
+h3, h4, h5, h6 {
+	border-bottom: none;
+	font-weight: bold;
+}
+h3 { font-size: 130%; }
+h3 .editsection { font-size: 76%; font-weight: normal; }
+h4 { font-size: 109%; }
+h4 .editsection { font-size: 86%; font-weight: normal; }
+h5 { font-size: 94%; }
+h5 .editsection { font-weight: normal; }
+h6 { font-size: 80%; }
+h6 .editsection { font-size: 125%; font-weight: normal; }
+
+ul {
+	line-height: 1.5em;
+	list-style-type: square;
+	margin: .3em 0 0 1.5em;
+	padding: 0;
+	list-style-image: url(bullet.gif);
+}
+ol {
+	line-height: 1.5em;
+	margin: .3em 0 0 3.2em;
+	padding: 0;
+	list-style-image: none;
+}
+li {
+	margin-bottom: .1em;
+}
+dt {
+	font-weight: bold;
+	margin-bottom: .1em;
+}
+dl {
+	margin-top: .2em;
+	margin-bottom: .5em;
+}
+dd {
+	line-height: 1.5em;
+	margin-left: 2em;
+	margin-bottom: .1em;
+}
+
+fieldset {
+	border: 1px solid #2f6fab;
+	margin: 1em 0 1em 0;
+	padding: 0 1em 1em;
+	line-height: 1.5em;
+}
+fieldset.nested {
+	margin: 0 0 0.5em 0;
+	padding: 0 0.5em 0.5em;
+}
+legend {
+	padding: .5em;
+	font-size: 95%;
+}
+form {
+	border: none;
+	margin: 0;
+}
+
+textarea {
+	width: 100%;
+	padding: .1em;
+}
+
+input.historysubmit {
+	padding: 0 .3em .3em .3em !important;
+	font-size: 94%;
+	cursor: pointer;
+	height: 1.7em !important;
+	margin-left: 1.6em;
+}
+select {
+	vertical-align: top;
+}
+q {
+	font-family: Times, "Times New Roman", serif;
+	font-style: italic;
+}
+/* disabled for now
+blockquote {
+	font-family: Times, "Times New Roman", serif;
+	font-style: italic;
+}*/
+code {
+	background-color: #f9f9f9;
+	font-family: monospace;
+}
+pre {
+	font-family: monospace;
+    white-space: pre;
+	padding: 1em;
+    margin: 1em;
+	line-height: 1.1em;
+
+    border: 1px solid #bcd;
+    background: #ebf1f5;
+    color: #222;
+}
+
+/*
+** the main content area
+*/
+
+#siteSub {
+	display: none;
+}
+#jump-to-nav {
+	display: none;
+}
+
+#contentSub, #contentSub2 {
+	font-size: 84%;
+	line-height: 1.2em;
+	margin: 0 0 1.4em 1em;
+	color: #7d7d7d;
+	width: auto;
+}
+span.subpages {
+	display: block;
+}
+
+/* Some space under the headers in the content area */
+#bs-content-wrapper h1, #bs-content-wrapper h2 {
+	margin-bottom: .6em;
+}
+#bs-content-wrapper h3, #bs-content-wrapper h4, #bs-content-wrapper h5 {
+	margin-bottom: .3em;
+}
+#firstHeading {
+	margin-bottom: 10px;
+	/* These two rules hack around bug 2013 (fix for more limited bug 11325).
+	   When bug 2013 is fixed properly, they should be removed. */
+	line-height: 1.2em;
+	padding-bottom: 0;
+}
+
+/* user notification thing */
+.usermessage {
+	background-color: #ffce7b;
+	border: 1px solid #ffa500;
+	color: black;
+	font-weight: bold;
+	margin: 2em 0 1em;
+	padding: .5em 1em;
+	vertical-align: middle;
+}
+#siteNotice {
+	text-align: center;
+	font-size: 95%;
+	padding: 0 0.9em;
+}
+#siteNotice p {
+	margin: 0;
+	padding: 0;
+}
+
+.catlinks {
+	border: 1px solid #aaa;
+	background-color: #f9f9f9;
+	padding: 5px;
+	margin-top: 1em;
+	clear: both;
+}
+/* currently unused, intended to be used by a metadata box
+in the bottom-right corner of the content area */
+.documentDescription {
+	/* The summary text describing the document */
+	font-weight: bold;
+	display: block;
+	margin: 1em 0;
+	line-height: 1.5em;
+}
+.documentByLine {
+	text-align: right;
+	font-size: 90%;
+	clear: both;
+	font-weight: normal;
+	color: #76797c;
+}
+
+/* emulate center */
+.center {
+	width: 100%;
+	text-align: center;
+}
+*.center * {
+	margin-left: auto;
+	margin-right: auto;
+}
+/* small for tables and similar */
+.small, .small * {
+	font-size: 94%;
+}
+table.small {
+	font-size: 100%;
+}
+
+/*
+** content styles
+*/
+
+#toc,
+.toc,
+.mw-warning {
+	border: 1px solid #aaa;
+	background-color: #f9f9f9;
+	padding: 5px;
+	font-size: 95%;
+    margin: 0 0 10px 10px
+}
+#toc h2,
+.toc h2 {
+	display: inline;
+	border: none;
+	padding: 0;
+	font-size: 100%;
+	font-weight: bold;
+}
+#toc #toctitle,
+.toc #toctitle,
+#toc .toctitle,
+.toc .toctitle {
+	text-align: center;
+}
+#toc ul,
+.toc ul {
+	list-style-type: none;
+	list-style-image: none;
+	margin-left: 0;
+	padding-left: 0;
+	text-align: left;
+    margin: 6px;
+}
+#toc ul ul,
+.toc ul ul {
+	margin: 0 0 0 2em;
+}
+#toc .toctoggle,
+.toc .toctoggle {
+	font-size: 94%;
+}
+
+.mw-warning {
+	margin-left: 50px;
+	margin-right: 50px;
+	text-align: center;
+}
+
+/* images */
+div.floatright, table.floatright {
+	clear: right;
+	float: right;
+	position: relative;
+	margin: 0 0 .5em .5em;
+	border: 0;
+/*
+	border: .5em solid white;
+	border-width: .5em 0 .8em 1.4em;
+*/
+}
+div.floatright p { font-style: italic; }
+div.floatleft, table.floatleft {
+	float: left;
+	clear: left;
+	position: relative;
+	margin: 0 .5em .5em 0;
+	border: 0;
+/*
+	margin: .3em .5em .5em 0;
+	border: .5em solid white;
+	border-width: .5em 1.4em .8em 0;
+*/
+}
+div.floatleft p { font-style: italic; }
+/* thumbnails */
+div.thumb {
+	margin-bottom: .5em;
+	width: auto;
+}
+div.thumbinner {
+	border: 1px solid #ccc;
+	padding: 3px !important;
+	background-color: #f9f9f9;
+	font-size: 94%;
+	text-align: center;
+	overflow: hidden;
+}
+html .thumbimage {
+	border: 1px solid #ccc;
+}
+html .thumbcaption {
+	border: none;
+	text-align: left;
+	line-height: 1.4em;
+	padding: 3px !important;
+	font-size: 94%;
+}
+div.magnify {
+	float: right;
+	border: none !important;
+	background: none !important;
+}
+div.magnify a, div.magnify img {
+	display: block;
+	border: none !important;
+	background: none !important;
+}
+div.tright {
+	clear: right;
+	float: right;
+	margin: .5em 0 1.3em 1.4em;
+}
+div.tleft {
+	float: left;
+	clear: left;
+	margin: .5em 1.4em 1.3em 0;
+}
+img.thumbborder {
+	border: 1px solid #dddddd;
+}
+.hiddenStructure {
+	display: none;
+}
+
+/*
+** classes for special content elements like town boxes
+** intended to be referenced directly from the wiki src
+*/
+
+/*
+** User styles
+*/
+/* table standards */
+table.rimage {
+	float: right;
+	position: relative;
+	margin-left: 1em;
+	margin-bottom: 1em;
+	text-align: center;
+}
+.toccolours {
+	border: 1px solid #aaa;
+	background-color: #f9f9f9;
+	padding: 5px;
+	font-size: 95%;
+}
+
+/*
+** edit views etc
+*/
+.special li {
+	line-height: 1.4em;
+	margin: 0;
+	padding: 0;
+}
+
+
+/*
+** keep the whitespace in front of the ^=, hides rule from konqueror
+** this is css3, the validator doesn't like it when validating as css2
+*/
+#bs-content-wrapper a.external,
+#bs-content-wrapper a.external[href ^="gopher://"] {
+	background: url(external.png) center right no-repeat;
+	padding: 0 13px;
+}
+.rtl #bs-content-wrapper a.external,
+.rtl #bs-content-wrapper a.external[href ^="gopher://"] {
+	background-image: url(external-rtl.png);
+}
+#bs-content-wrapper a.external[href ^="https://"],
+.link-https {
+	background: url(lock_icon.gif) center right no-repeat;
+	padding: 0 16px;
+}
+#bs-content-wrapper a.external[href ^="mailto:"],
+.link-mailto {
+	background: url(mail_icon.gif) center right no-repeat;
+	padding: 0 18px;
+}
+#bs-content-wrapper a.external[href ^="news://"] {
+	background: url(news_icon.png) center right no-repeat;
+	padding: 0 18px;
+}
+#bs-content-wrapper a.external[href ^="ftp://"],
+.link-ftp {
+	background: url(file_icon.gif) center right no-repeat;
+	padding: 0 18px;
+}
+#bs-content-wrapper a.external[href ^="irc://"],
+.link-irc {
+	background: url(discussionitem_icon.gif) center right no-repeat;
+	padding: 0 18px;
+}
+#bs-content-wrapper a.external[href $=".ogg"], #bs-content-wrapper a.external[href $=".OGG"],
+#bs-content-wrapper a.external[href $=".mid"], #bs-content-wrapper a.external[href $=".MID"],
+#bs-content-wrapper a.external[href $=".midi"], #bs-content-wrapper a.external[href $=".MIDI"],
+#bs-content-wrapper a.external[href $=".mp3"], #bs-content-wrapper a.external[href $=".MP3"],
+#bs-content-wrapper a.external[href $=".wav"], #bs-content-wrapper a.external[href $=".WAV"],
+#bs-content-wrapper a.external[href $=".wma"], #bs-content-wrapper a.external[href $=".WMA"],
+.link-audio {
+	background: url("audio.png") center right no-repeat;
+	padding: 0 13px;
+}
+#bs-content-wrapper a.external[href $=".ogm"], #bs-content-wrapper a.external[href $=".OGM"],
+#bs-content-wrapper a.external[href $=".avi"], #bs-content-wrapper a.external[href $=".AVI"],
+#bs-content-wrapper a.external[href $=".mpeg"], #bs-content-wrapper a.external[href $=".MPEG"],
+#bs-content-wrapper a.external[href $=".mpg"], #bs-content-wrapper a.external[href $=".MPG"],
+.link-video {
+	background: url("video.png") center right no-repeat;
+	padding: 0 13px;
+}
+#bs-content-wrapper a.external[href $=".pdf"], #bs-content-wrapper a.external[href $=".PDF"],
+#bs-content-wrapper a.external[href *=".pdf#"], #bs-content-wrapper a.external[href *=".PDF#"],
+#bs-content-wrapper a.external[href *=".pdf?"], #bs-content-wrapper a.external[href *=".PDF?"],
+.link-document {
+	background: url("document.png") center right no-repeat;
+	padding: 0 12px;
+}
+
+/* for rtl wikis */
+.rtl #bs-content-wrapper a.external {
+	background-position: left;
+	padding-right: 0;
+}
+.rtl a.feedlink {
+	background-position: right;
+	padding-right: 16px;
+	padding-left: 0;
+}
+
+/* correction for ltr wikis */
+.ltr #bs-content-wrapper a.external {
+	padding-left: 0;
+}
+
+/* disable interwiki styling */
+#bs-content-wrapper a.extiw,
+#bs-content-wrapper a.extiw:active {
+	color: #36b;
+}
+#bs-content-wrapper a.external {
+	color: #36b;
+}
+
+#bs-footer{
+    text-align: center;
+}
+
+#bs-footer a{
+    padding-right:10px;
+    padding-left:10px;
+}
+
+#bs-footer span{
+    color: #b3b3b3;
+}
+
+
+div.mw-geshi {
+  padding: 1em; 
+  margin: 1em 0; 
+  border: 1px dashed #2f6fab;
+  background-color: #f9f9f9;
+}
+
+.rich-navigation {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 42px;
+}
+
+.rich-navigation h4 {
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #666;
+}
+
+.rich-navigation .nav-group {
+  float: left;
+  width: 19.999%;
+}
+
+.rich-navigation .nav-phone {
+  margin-top: 10px;
+}

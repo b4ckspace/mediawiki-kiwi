@@ -1,0 +1,13 @@
+    #bs-search , #bs-navigation, .printfooter, #bs-cactions, #toc, #bs-footer {
+        visibility: hidden;
+        height: 0px;
+    }
+
+    /* fix: removes additional space in #toc */
+    #toc *{
+        height: 0px;
+    }
+
+    #bs-logo {
+        text-align: center;
+    }
