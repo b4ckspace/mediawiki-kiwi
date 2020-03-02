@@ -201,7 +201,6 @@ class KiwiTemplate extends BaseTemplate {
             <div class="nav-group">
                 <h4>Social Media</h4>
                 <ul class="nav-social-media">
-                    <li><a href="https://plus.google.com/u/0/116003874054937500169">google+</a></li>
                     <li><a href="https://twitter.com/b4ckspace">twitter</a></li>
                     <li><a href="https://vimeo.com/backspace">vimeo</a></li>
                     <li><a href="https://github.com/b4ckspace">github</a></li>
