@@ -172,7 +172,7 @@ class KiwiTemplate extends BaseTemplate {
                         <li class="last leaf"><a href="<?php echo $this->getPageURL('Verein:Preisliste'); ?>">Preisliste</a>
                     </ul>
                 </li>
-                <li class="last leaf"><a href="<?php echo $this->getPageURL('Spezial:Kontakt'); ?>">Kontakt</a></li>
+                <li class="last leaf"><a href="<?php echo $this->getPageURL('Kontakt'); ?>">Kontakt</a></li>
             </ul>
         </div>
 
