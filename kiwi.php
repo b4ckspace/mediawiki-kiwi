@@ -240,7 +240,6 @@ class KiwiTemplate extends BaseTemplate {
 
                 <div class="nav-phone">
                     Tel: (0951) 18 50 51 45<br>
-                    Mail: vorstand@
                 </div>
             </div>
         </div>
