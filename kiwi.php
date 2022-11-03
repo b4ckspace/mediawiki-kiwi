@@ -164,7 +164,6 @@ class KiwiTemplate extends BaseTemplate {
                     <span>Sonstiges</span>
                     <ul class="menu">
                         <li class="first leaf"><a href="<?php echo $this->getPageURL('Category:Howto'); ?>">HowTo</a></li>
-                        <li class="leaf"><a href="<?php echo $this->getPageURL('Todo'); ?>">Todo</a></li>
                 	<li class="leaf"><a href="<?php echo $this->getPageURL('Gallery'); ?>">Gallery</a></li>
                         <li class="leaf"><a href="<?php echo $this->getPageURL('Essen'); ?>">Essen</a></li>
                         <li class="leaf"><a href="<?php echo $this->getPageURL('Sponsoring'); ?>">Sponsoren</a></li>
