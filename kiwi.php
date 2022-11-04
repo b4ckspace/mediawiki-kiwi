@@ -88,7 +88,7 @@ class KiwiTemplate extends BaseTemplate {
 		$skin = $this->data['skin'];
 
 		// Suppress warnings to prevent notices about missing indexes in $this->data
-		wfSuppressWarnings();
+		//wfSuppressWarnings();
 		$this->html( 'headelement' );
 
         $curTitle = false;
