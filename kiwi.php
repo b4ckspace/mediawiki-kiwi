@@ -198,9 +198,10 @@ class KiwiTemplate extends BaseTemplate {
             <div class="nav-group">
                 <h4>Social Media</h4>
                 <ul class="nav-social-media">
-                    <li><a href="https://twitter.com/b4ckspace">twitter</a></li>
-                    <li><a href="https://vimeo.com/backspace">vimeo</a></li>
-                    <li><a href="https://github.com/b4ckspace">github</a></li>
+                    <li><a rel="me" href="https://chaos.social/@backspace">Mastodon</a></li>
+                    <li><a href="https://twitter.com/b4ckspace">Twitter</a></li>
+                    <li><a href="https://vimeo.com/backspace">Vimeo</a></li>
+                    <li><a href="https://github.com/b4ckspace">GitHub</a></li>
                 </ul>
             </div>
             <div class="nav-group">
