@@ -184,12 +184,16 @@ class KiwiTemplate extends BaseTemplate {
                 </ul>
                 <?php endif; ?>
 
-	        <h1 id="firstHeading" class="firstHeading"><?php $this->html('title') ?></h1>
-		<?php $this->html('subtitle'); ?>
-                <?php $this->html('bodytext'); ?>
-                <?php if($this->data['dataAfterContent']) { $this->html ('dataAfterContent'); } ?>
+                <div id="content">
+                    <h1 id="firstHeading" class="firstHeading"><?php $this->html('title') ?></h1>
+                    <div id="mw-content-text">
+                        <?php $this->html('subtitle'); ?>
+                        <?php $this->html('bodytext'); ?>
+                        <?php if($this->data['dataAfterContent']) { $this->html ('dataAfterContent'); } ?>
 
-                <?php if( $this->data['catlinks'] ) { $this->html('catlinks'); } ?>
+                        <?php if( $this->data['catlinks'] ) { $this->html('catlinks'); } ?>
+                    </div>
+                </div>
                 <div class="visualClear"></div>
             </div>
         </div>
